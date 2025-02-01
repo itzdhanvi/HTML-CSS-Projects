@@ -1,1 +1,165 @@
-
+body{
+    margin: 0;
+    background-color: #2C2C2C;
+}
+.container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+}
+.left{
+    width: 600px;
+    height: 100%;
+    padding: 10px 0px 0px 50px;
+    .bold{
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 40px;
+    }
+    #heading1{
+        color: #FEC3C7;
+    }
+    #heading2{
+        color: #9AD7F3;
+    }
+    #heading3{
+        color:#67D4CF;
+    }
+    .para{
+        width: 60%;
+        color: #CBCBCB;
+    }
+    button{
+        cursor: pointer;
+        color: #535353;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        border: none;
+        background-color: white;
+        width: 100px;
+        height: 30px;
+        margin-top: 20px;
+    }
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    .row{
+        display: flex;
+        justify-content: center;
+        .card{
+            margin: 10px;
+            border-radius: 18px;
+            height: 160px;
+            width: 145px;
+            cursor: pointer;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 50%;
+            }
+        }
+    }
+    #first{
+        #card1{
+            background-color: #FED440;
+        }
+        #card2{
+            background-color: #EAB3B0;
+        }
+        #card3{
+            background-color: #0091CA;
+        }
+        #card4{
+            background-color: #FC7115;
+        }
+    }
+    #second{
+        #card1{
+            background-color: #CCDCDB;
+        }
+        #card2{
+            background-color: #fd796a;
+        }
+        #card3{
+            background-color: #fd7869;
+        }
+        #card4{
+            background-color: #fc7317;
+        }
+    }
+    #third{
+        #card1{
+            background-color: #fe7125;
+        }
+        #card2{
+            background-color: #EAB3B0;
+        }
+        #card3{
+            background-color: #0092df;
+        }
+        #card4{
+            background-color: #5bc2e7;
+        }
+    }
+    #forth{
+        #card1{
+            background-color: #597fc8;
+        }
+        #card2{
+            background-color: #fec0c1;
+        }
+        #card3{
+            background-color: #007cc2;
+        }
+        #card4{
+            background-color: #8cebe6;
+        }
+    }
+}
+@media (max-width: 1208px){
+    .container .right .card{
+        width: 100px;
+        height: 120px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        display: inline-grid;
+        .right{
+            width: 100%;
+            margin-top: 50px;
+            align-items: center;
+            .card{
+                width: 120px;
+                height: 150px;
+            }
+        }
+        .left{
+            margin-left: 10px;
+            margin-right: 10px;
+            .bold{
+                font-size: 25px;
+                line-height: 20px;
+                /* margin-left: 1; */
+            }
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+            button{
+                align-self: center;
+                margin-top: 40px;
+            }
+            .para{
+                width:100%;
+                overflow: auto;
+            }
+        }
+    }
+}

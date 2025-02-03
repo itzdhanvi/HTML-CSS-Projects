@@ -69,6 +69,7 @@ body{
             justify-content: space-between;
             flex-direction: column;
             img{
+                padding-top: 10px;
                 width: 50%;
             }
             h4{
@@ -149,6 +150,9 @@ body{
             .card{
                 width: 120px;
                 height: 150px;
+            }
+            h4{
+                width: 80%;
             }
         }
         .left{

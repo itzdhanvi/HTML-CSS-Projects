@@ -55,6 +55,9 @@ body{
     .row{
         display: flex;
         justify-content: center;
+        a{
+            text-decoration: none;
+        }
         .card{
             margin: 10px;
             border-radius: 18px;
@@ -63,9 +66,13 @@ body{
             cursor: pointer;
             align-items: center;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            flex-direction: column;
             img{
                 width: 50%;
+            }
+            h4{
+                color: #2C2C2C;
             }
         }
     }

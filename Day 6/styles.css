@@ -1,0 +1,301 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+.slides {
+    padding: 0;
+    width: 100%;
+    /* height: 420px; */
+    /* display: block; */
+    margin: auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+body {
+  background-color: #EAEAEA;
+  margin: 0;
+}
+.container{
+  display: grid;
+  place-items: center; 
+  height: 100%;
+  height: 80vh; 
+}
+.card {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70%; 
+  /* padding: 20px; */
+
+}
+
+/* Floating the behind box to the left */
+.card .behind {
+  position: absolute;
+  z-index: -1;
+  width: 30%;
+  height: 65%;
+  left: 14%;
+  border: 10px solid #3E66DF;
+}
+
+/* Adjusting the main content area */
+.card .above {
+  display: flex;
+  width: 70%;
+  margin-left: 80px;
+  background-color: #FFFFFF;
+  position: relative;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10px; */
+}
+
+/* Adjusting .side-border to be slightly shorter than the image */
+.card .above .side-border {
+  padding: 10px;
+  border-right: 10px solid #3E66DF;
+  border-top: 10px solid #3E66DF;
+  border-bottom: 10px solid #3E66DF;
+  height: 80%;
+  width: 90%;
+}
+
+/* Adjusting the left section */
+.card .above .left {
+  padding: 50px;
+  padding-right: 10px;
+  width: 60%;
+}
+
+.card .above .left p {
+  font-weight: 600;
+  font-size: 28px;
+  width: 80%;
+}
+
+.card .above .left .name {
+  display: flex;
+  align-items: center;
+}
+
+.card .above .left .name .box {
+  width: 25px;
+  height: 25px;
+  background-color: #3E66DF;
+  margin-right: 10px;
+}
+
+.card .above .left .name h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card .above .left .name h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+/* Adjusting the right section */
+.card .above .right {
+  width: 30%;
+  padding: 20px;
+  padding-right: 10px;
+  position: relative;
+  display: flex;
+}
+
+.card .above .right img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Fix for Smaller Screens */
+@media(max-width:900px){
+  .card .above .left p{
+      font-size: 25px;
+      width: 100%;
+      padding: 0;
+  }
+  .card .above .left {
+      padding: 0px;
+  }
+  .card .above .right{
+      padding: 0px;
+  }
+}
+@media (max-width: 748px) {
+  .card {
+      width: 90%;
+      display: grid;
+      place-items: center;
+  }
+  .card .behind {
+      position: absolute;
+      z-index: -1;
+      width: 50%;
+      height: 65%;
+      /* left: 14%; */
+      border: 10px solid #3E66DF;
+  }
+  .above {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+  }
+  .card .above .left {
+      padding: 10px;
+      width: 90%;
+  }
+
+  .card .above .left p {
+      font-size: 20px;
+      width: 100%;
+  }
+  .card .above .left .name h2 {
+      font-size: 20px;
+  }
+  .card .above .left .name h5 {
+      font-size: 13px;
+  }
+  .card .above .right{
+      width: 80%;
+   
+  }
+}
+
+
+
+@media(max-width:500px){
+  .card .above .left {
+      padding: 10px;
+      width: 100%;
+  }
+  .card .above .left p {
+      font-size: 18px;
+      width: 100%;
+  }
+  .card .above .left .name h2 {
+      font-size: 12px;
+  }
+  .card .above .left .name h5 {
+      font-size: 10px;
+  }
+  /* .card .abo100;
+      height: 140px;
+  } */
+  .card .above .right{
+      width: 80%;
+       /* display: grid;
+       place-items: center; */
+  }
+  
+}

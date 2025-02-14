@@ -1,0 +1,13 @@
+.body {
+    margin: 0;
+}
+
+.container {
+    display: grid; /* Ensures proper alignment */
+    place-items: center; /* Centers its content */
+}
+
+.card {
+    background-color: aqua;
+    width: 50%;
+}

@@ -3,8 +3,6 @@
 .slides {
     padding: 0;
     width: 100%;
-    /* height: 420px; */
-    /* display: block; */
     margin: auto;
     position: relative;
 }
@@ -25,8 +23,6 @@
 .slide {
     top: 0;
     opacity: 0;
-    width: 609px;
-    height: 420px;
     display: block;
     position: absolute;
 
@@ -35,37 +31,30 @@
     transition: all .7s ease-in-out;
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-}
-
 .nav label {
-    width: 200px;
-    height: 100%;
+  margin-top: 20px;
+    width: 50px;
+    height: 50px;
     display: none;
     position: absolute;
 
-    opacity: 0;
     z-index: 9;
     cursor: pointer;
 
     transition: opacity .2s;
 
-    color: #FFF;
-    font-size: 156pt;
+    color: #3E66DF;
+    font-size: 30pt;
     text-align: center;
-    line-height: 380px;
     font-family: "Varela Round", sans-serif;
-    background-color: rgba(255, 255, 255, .3);
+    border: black 1px solid;
+    border-radius: 40px;
     text-shadow: 0px 0px 15px rgb(119, 119, 119);
 }
 
 .slide:hover + .nav label { opacity: 0.5; }
 
-.nav label:hover { opacity: 1; }
-
-.nav .next { right: 0; }
+.nav .next { left: 15%; }
 
 input:checked + .slide-container  .slide {
     opacity: 1;
@@ -77,44 +66,10 @@ input:checked + .slide-container  .slide {
 
 input:checked + .slide-container .nav label { display: block; }
 
-.nav-dots {
-  width: 100%;
-  bottom: 9px;
-  height: 11px;
-  display: block;
-  position: absolute;
-  text-align: center;
-}
-
-.nav-dots .nav-dot {
-  top: -5px;
-  width: 11px;
-  height: 11px;
-  margin: 0 4px;
-  position: relative;
-  border-radius: 100%;
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.nav-dots .nav-dot:hover {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-input#img-1:checked ~ .nav-dots label#img-dot-1,
-input#img-2:checked ~ .nav-dots label#img-dot-2,
-input#img-3:checked ~ .nav-dots label#img-dot-3,
-input#img-4:checked ~ .nav-dots label#img-dot-4,
-input#img-5:checked ~ .nav-dots label#img-dot-5,
-input#img-6:checked ~ .nav-dots label#img-dot-6 {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-
 body {
   background-color: #EAEAEA;
   margin: 0;
+  min-height: 100vh;
 }
 .container{
   display: grid;
@@ -130,21 +85,16 @@ body {
   justify-content: center;
   width: 100%;
   height: 70%; 
-  /* padding: 20px; */
-
 }
-
-/* Floating the behind box to the left */
 .card .behind {
   position: absolute;
   z-index: -1;
   width: 30%;
   height: 65%;
   left: 14%;
+  top: 10%;
   border: 10px solid #3E66DF;
 }
-
-/* Adjusting the main content area */
 .card .above {
   display: flex;
   width: 70%;
@@ -154,10 +104,7 @@ body {
   height: 100%;
   justify-content: center;
   align-items: center;
-  /* margin: 10px; */
 }
-
-/* Adjusting .side-border to be slightly shorter than the image */
 .card .above .side-border {
   padding: 10px;
   border-right: 10px solid #3E66DF;
@@ -166,44 +113,35 @@ body {
   height: 80%;
   width: 90%;
 }
-
-/* Adjusting the left section */
 .card .above .left {
   padding: 50px;
   padding-right: 10px;
   width: 60%;
 }
-
 .card .above .left p {
   font-weight: 600;
   font-size: 28px;
   width: 80%;
 }
-
 .card .above .left .name {
   display: flex;
   align-items: center;
 }
-
 .card .above .left .name .box {
   width: 25px;
   height: 25px;
   background-color: #3E66DF;
   margin-right: 10px;
 }
-
 .card .above .left .name h2 {
   margin: 0;
   font-size: 20px;
 }
-
 .card .above .left .name h5 {
   margin: 0;
   font-size: 14px;
   font-weight: 100;
 }
-
-/* Adjusting the right section */
 .card .above .right {
   width: 30%;
   padding: 20px;
@@ -211,7 +149,6 @@ body {
   position: relative;
   display: flex;
 }
-
 .card .above .right img {
   width: 100%;
   height: 100%;
@@ -230,8 +167,20 @@ body {
   .card .above .right{
       padding: 0px;
   }
+  .card .behind{
+    top: 10%;
+  }
 }
 @media (max-width: 748px) {
+  .nav label{
+    bottom: 0;
+  }
+  .nav .next{
+    left: 30%;
+  }
+  .card .behind{
+    top: 20px;
+  }
   .card {
       width: 90%;
       display: grid;
@@ -242,7 +191,6 @@ body {
       z-index: -1;
       width: 50%;
       height: 65%;
-      /* left: 14%; */
       border: 10px solid #3E66DF;
   }
   .above {
@@ -268,13 +216,15 @@ body {
   }
   .card .above .right{
       width: 80%;
-   
   }
 }
 
 
 
 @media(max-width:500px){
+  .card .behind{
+    top: 40px;
+  }
   .card .above .left {
       padding: 10px;
       width: 100%;
@@ -289,13 +239,19 @@ body {
   .card .above .left .name h5 {
       font-size: 10px;
   }
-  /* .card .abo100;
-      height: 140px;
-  } */
   .card .above .right{
       width: 80%;
-       /* display: grid;
-       place-items: center; */
   }
-  
+  .card .above{
+    width: 80%;
+  }
+  .nav label{
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+  }
+  .nav .next{
+    left: 20%;
+  }
 }

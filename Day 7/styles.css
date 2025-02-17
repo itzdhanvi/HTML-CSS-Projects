@@ -1,0 +1,119 @@
+body{
+    background-color: #FAFAFA;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 100 ;
+}
+h1{
+    font-size: 2.4rem;
+    padding-top: 10px;
+    color: #272A33;
+}
+.container{
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 20px;
+    .left{
+        width: 100%;
+        background-color: #272A33;
+        color: #707078;
+        padding: 40px 30px;
+        h3{
+            color: #F3F4F4;
+            font-size: 2rem;
+        }
+        input, textarea{
+            background-color: #272A33;
+            border: 0px;
+            border-bottom: 1px solid#41444D;
+            width: 90%;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+        input{
+            height: 3rem;
+        }
+        textarea{
+            padding-top: 15px;
+            height: 6rem;
+        }
+        input:focus , textarea:focus{
+            color: #F3F4F4;
+            outline: none;  
+            border: none;
+            border-bottom:1px solid #41444D;   
+        }
+        .submit{
+            color: white;
+            width: 40%;
+            height: 2.4rem;
+            margin-top: 10px;
+            border-radius: 2px;
+            background-color: #E99840;
+            cursor: pointer;
+            font-size:12px;
+        }
+    }
+    .right{
+        background-color: #1D1E23;
+        width: 100%;
+        color: #F3F4F4;
+        padding: 40px 30px;
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            color: #707078;
+            font-weight: 400;
+        }
+        ul{
+            color: #707078;
+            padding-left: 0px;
+            list-style: none;
+            img{
+                width: 30px;
+            }
+            li{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                line-height: 3rem;
+            }
+            p{
+                margin: 0px;
+            }
+            .txt{
+                color: #ffffff;
+                font-weight: 500;
+            }
+            a{
+                color: #707078;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media(max-width: 798px){
+    h1{
+        padding-top: 20px;
+    }
+    .container{
+        display: grid;
+        place-items: center;
+        padding: 0px 30px;
+        padding-bottom: 20px;
+    }
+    .right{
+        p{
+            line-height: 30px;
+            padding: 10px;
+        }
+    }
+}

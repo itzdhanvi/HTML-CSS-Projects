@@ -52,8 +52,15 @@ input:checked + label .arrow {
 }
 .faq-title .arrow {
     display: inline-block;
+    height: 20px;
     transition: transform 0.3s ease-in-out; /* Smooth arrow rotation */
 }
 input:checked + label .arrow {
     transform: rotate(180deg);
+}
+
+@media(max-width:500px){
+    body{
+        padding: 20px;
+    }    
 }

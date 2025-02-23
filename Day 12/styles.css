@@ -216,6 +216,9 @@ body {
         .con img{
             visibility: hidden;
         }
+        .con{
+            z-index: -4
+        }
         .bottom-content{
             padding: 20px;
             flex-direction: column;

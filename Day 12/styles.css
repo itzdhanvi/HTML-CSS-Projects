@@ -157,6 +157,7 @@ body {
 .con{
     display: flex;
     align-items: flex-end;
+    z-index: -4;
     img{
         position: absolute;
         left: 10%;

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf with Objects</title>
+    <link rel="stylesheet" href="../Day 14/styles.css">
+    <link rel="icon" href="../assets/logo.png">
+</head>
+<body>
+    <div id="SoloLeveling"></div>
+    <div id="OnePiece"></div>
+    <div id="TokyoRevengers"></div>
+    <div id="DemonSlayer"></div>
+    <div id="JJK"></div>
+    <div id="wrapper">
+        <div class="dots" onclick="this.classList.toggle('active');">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="shadow cut"></div>
+            <div class="container cut">
+                <div class="drop cut2"></div>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="#DragonBall">Dragon Ball</a></li>
+                    <li><a href="#SoloLeveling">Solo Leveling</a></li>
+                    <li><a href="#OnePiece">One Piece</a></li>
+                    <li><a href="#TokyoRevengers">Tokyo Revenger</a></li>
+                    <li><a href="#DemonSlayer">Demon Slayer</a></li>
+                    <li><a href="#JJK">Jujutsu Kiesen</a></li>
+                </ul>
+            </div>
+            <div class="dot"></div>
+        </div>
+        <div class="cursor" onclick="document.querySelector('.dots').classList.toggle('active');"></div>
+    </div>
+</body>
+
+</html>
